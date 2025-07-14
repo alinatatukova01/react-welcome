@@ -1,0 +1,14 @@
+.off{
+  height: 100px;
+  width: 100px;
+  border: 2px solid pink;
+  border-radius: 50%;
+}
+
+.on{
+  background-color: yellow;
+  height: 100px;
+  width: 100px;
+  border: 2px solid pink;
+  border-radius: 50%;
+}
