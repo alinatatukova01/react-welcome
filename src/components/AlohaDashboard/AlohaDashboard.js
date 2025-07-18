@@ -9,22 +9,27 @@ class Alohadashboard extends React.Component {
         {
           firstName: "Luice",
           lastName: "Hamilton",
+          id: 1,
         },
         {
           firstName: "Max",
           lastName: "Ferstrappen",
+          id: 2,
         },
         {
           firstName: "Charles",
           lastName: "Leclerc",
+          id: 3,
         },
         {
           firstName: "Sebastian",
           lastName: "Vettel",
+          id: 4,
         },
         {
           firstName: "Fernando",
           lastName: "Alonso",
+          id: 5,
         },
       ],
       sortDirection: true,
@@ -34,7 +39,7 @@ class Alohadashboard extends React.Component {
   userToAloha() {
     const { usersArray } = this.state;
     return usersArray.map((user) => (
-      <Aloha name={user.firstName} lastName={user.lastName} />
+      <Aloha key={user.id} name={user.firstName} lastName={user.lastName} />
     ));
   }
 
