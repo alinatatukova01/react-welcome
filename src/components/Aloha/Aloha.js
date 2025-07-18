@@ -19,9 +19,11 @@ class Aloha extends React.Component {
 
   render() {
     const greeting = this.state.greeting ? "Hello" : "Buy";
-    const className = this.state.greeting ? "greenText" : "redText"
+    const className = this.state.greeting ? "greenText" : "redText";
 
-    return <h1 onClick={() => {this.changeText()}} className={className}>{greeting}, {this.props.name}! Clicks: {this.state.count}</h1>;
+    const {name,lastName} = this.props;
+
+    return <h1 onClick={() => {this.changeText()}} className={className}>{greeting}, {name} {lastName}! Clicks: {this.state.count}</h1>;
   }
 }
 
