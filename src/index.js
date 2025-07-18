@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 // import App from './components/App/App/App';
 
-import Greeting from './components/Greeting/Greeting';
+import Alohadashboard from './components/AlohaDashboard/AlohaDashboard';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Greeting name="Kisik"/>
+  <Alohadashboard/>
 );
 
 // If you want to start measuring performance in your app, pass a function

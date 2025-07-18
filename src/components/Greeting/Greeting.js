@@ -1,7 +1,7 @@
 import React from "react";
 import './Greeting.css'
 
-class Greeting extends React.Component {
+class Aloha extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -25,4 +25,4 @@ class Greeting extends React.Component {
   }
 }
 
-export default Greeting;
+export default Aloha;
