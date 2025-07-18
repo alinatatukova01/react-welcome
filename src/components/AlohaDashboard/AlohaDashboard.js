@@ -1,5 +1,5 @@
 import React from "react";
-import Aloha from "../Greeting/Greeting";
+import Aloha from "../Aloha/Aloha";
 
 class Alohadashboard extends React.Component{
     render(){
