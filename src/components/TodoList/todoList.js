@@ -1,4 +1,5 @@
 import React from "react";
+import Item from "./Item";
 
 class TodoList extends React.Component {
   constructor(props) {
@@ -12,20 +13,19 @@ class TodoList extends React.Component {
     };
   }
 
-  deleteRender(event){
-    //через ивент вытягиваем переданное через датасет айдишник таски
-    const id = Number(event.currentTarget.dataset.id);
+  deleteRender(id) {
 
-    const newArr = this.state.tasks.filter((task) => (task.id !== id)); //фильтруем массив, если чей то таск айди совпадает с айди переданным из датасет при нажатии кнопки, то оставляем всё, кроме этого элемента
+    const newArr = this.state.tasks.filter((task) => task.id !== id); //фильтруем массив, если чей то таск айди совпадает с айди переданным из датасет при нажатии кнопки, то оставляем всё, кроме этого элемента
     this.setState({
-        tasks: newArr,
-    })
+      tasks: newArr,
+    });
   }
 
   renderTasks() {
     const tasks = this.state.tasks;
-    return tasks.map((task) => 
-    <li key={task.id}>{task.text} <button data-id = {task.id} onClick={(event) => {this.deleteRender(event)}}>Delete</button></li>
+    return tasks.map(
+      (task) => <Item   key={task.id} text={task.text} id={task.id} changeParentState = {() => {this.deleteRender(task.id)}}/>
+      // <li key={task.id}>{task.text} <button data-id = {task.id} onClick={(event) => {this.deleteRender(event)}}>Delete</button></li>
     );
   }
 

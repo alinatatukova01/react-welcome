@@ -4,14 +4,14 @@ import ReactDOM from 'react-dom/client';
 
 // import Alohadashboard from './components/AlohaDashboard/AlohaDashboard';
 
-// import TodoList from './components/TodoList/todoList';
+import TodoList from './components/TodoList/todoList';
 
-import Scene from './components/Scene/Scene';
+// import Scene from './components/Scene/Scene';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Scene/>
+  <TodoList/>
 );
 
 // If you want to start measuring performance in your app, pass a function
