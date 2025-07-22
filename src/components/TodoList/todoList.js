@@ -1,5 +1,6 @@
 import React from "react";
 import Item from "./Item";
+import Header from "./Header";
 
 class TodoList extends React.Component {
   constructor(props) {
@@ -10,6 +11,10 @@ class TodoList extends React.Component {
         { text: "meet friens", id: 2 },
         { text: "go for a walk", id: 3 },
       ],
+      clickItem : {
+        text: '',
+        id: null
+      }
     };
   }
 
@@ -21,17 +26,29 @@ class TodoList extends React.Component {
     });
   }
 
+    clickText(id, itemText){
+    this.setState({
+      clickItem: {
+        text: itemText,
+        id: id,
+      }
+    })
+  }
+
   renderTasks() {
     const tasks = this.state.tasks;
     return tasks.map(
-      (task) => <Item   key={task.id} text={task.text} id={task.id} changeParentState = {() => {this.deleteRender(task.id)}}/>
-      // <li key={task.id}>{task.text} <button data-id = {task.id} onClick={(event) => {this.deleteRender(event)}}>Delete</button></li>
+      (task) => <Item   key={task.id} text={task.text} id={task.id} changeParentState = {() => {this.deleteRender(task.id)}} selectedId = {this.state.clickItem.id} selectedItem = {() => {this.clickText(task.id, task.text)}}/>
+
     );
   }
+
+
 
   render() {
     return (
       <>
+        <Header text = {this.state.clickItem.text}/>
         <ul>{this.renderTasks()}</ul>
       </>
     );

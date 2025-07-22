@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 
 // import Alohadashboard from './components/AlohaDashboard/AlohaDashboard';
 
-import TodoList from './components/TodoList/todoList';
+import TodoList from './components/TodoList/TodoList';
 
 // import Scene from './components/Scene/Scene';
 
