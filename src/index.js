@@ -8,12 +8,14 @@ import ReactDOM from 'react-dom/client';
 
 // import Scene from './components/Scene/Scene';
 
-import Counter from './components/Counter/Counter';
+// import Counter from './components/Counter/Counter';
+
+import CounterPage from './components/Counter/CounterPage';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Counter/>
+  <CounterPage/>
 );
 
 // If you want to start measuring performance in your app, pass a function
