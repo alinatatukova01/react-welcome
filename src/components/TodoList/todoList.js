@@ -20,7 +20,7 @@ class TodoList extends React.Component {
 
   deleteRender(id) {
 
-    const newArr = this.state.tasks.filter((task) => task.id !== id); //фильтруем массив, если чей то таск айди совпадает с айди переданным из датасет при нажатии кнопки, то оставляем всё, кроме этого элемента
+    const newArr = this.state.tasks.filter((task) => task.id !== id); 
     this.setState({
       tasks: newArr,
     });
