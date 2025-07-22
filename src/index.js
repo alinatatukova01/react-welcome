@@ -10,12 +10,14 @@ import ReactDOM from 'react-dom/client';
 
 // import Counter from './components/Counter/Counter';
 
-import CounterPage from './components/Counter/CounterPage';
+// import CounterPage from './components/Counter/CounterPage';
+
+import UserList from './components/UserList/UserList';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <CounterPage/>
+  <UserList/>
 );
 
 // If you want to start measuring performance in your app, pass a function
